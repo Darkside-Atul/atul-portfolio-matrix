@@ -20,9 +20,9 @@ export default {
       },
       colors: {
         matrix: {
-          light: "#00ff00",
-          DEFAULT: "#008f00",
-          dark: "#004f00",
+          light: "#0EA5E9", // Changed from #00ff00 to light blue
+          DEFAULT: "#0284C7", // Changed from #008f00 to medium blue
+          dark: "#0C4A6E", // Changed from #004f00 to dark blue
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

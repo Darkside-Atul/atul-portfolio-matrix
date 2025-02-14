@@ -25,7 +25,7 @@ const MatrixRain = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#00ff00';
+      ctx.fillStyle = '#0EA5E9'; // Changed from #00ff00 to light blue
       ctx.font = '15px Fira Code';
 
       for (let i = 0; i < drops.length; i++) {
