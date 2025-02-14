@@ -21,14 +21,19 @@ const MatrixRain = () => {
     const characters = '0123456789';
     const words = ['ATUL', 'KUMAR', 'AI', 'ML', 'NLP'];
 
+    // Colors array for variation
+    const colors = ['#0EA5E9', '#ea384c']; // Blue and Red
+
     const draw = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#0EA5E9'; // Changed from #00ff00 to light blue
       ctx.font = '15px Fira Code';
 
       for (let i = 0; i < drops.length; i++) {
+        // Randomly select color for each column
+        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+        
         // Randomly decide whether to show a number or a word
         const shouldShowWord = Math.random() < 0.05; // 5% chance to show a word
         let text;
