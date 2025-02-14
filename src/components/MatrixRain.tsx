@@ -19,7 +19,7 @@ const MatrixRain = () => {
 
     // Custom text array with numbers and relevant words
     const characters = '0123456789';
-    const words = ['ATUL', 'KUMAR', 'AI', 'HIGH', 'SCHOOL'];
+    const words = ['ATUL', 'KUMAR', 'AI', 'ML', 'NLP'];
 
     const draw = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';

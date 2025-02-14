@@ -1,4 +1,3 @@
-
 import { Github, Linkedin, Mail } from 'lucide-react';
 import MatrixRain from '../components/MatrixRain';
 import Navbar from '../components/Navbar';
@@ -14,7 +13,7 @@ const Index = () => {
         <section id="home" className="min-h-screen flex items-center justify-center relative">
           <div className="container px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-              Hi, I'm <span className="matrix-text">Atul Kumar</span>
+              Hi, I'm <span className="font-mono text-[#0EA5E9] animate-pulse-matrix">Atul Kumar</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-400 mb-8 animate-fade-in">
               AI Enthusiast & High School Student
