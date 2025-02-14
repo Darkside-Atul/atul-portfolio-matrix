@@ -17,7 +17,9 @@ const MatrixRain = () => {
     const columns = Math.floor(canvas.width / 20);
     const drops: number[] = new Array(columns).fill(0);
 
-    const characters = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    // Custom text array with numbers and relevant words
+    const characters = '0123456789';
+    const words = ['ATUL', 'KUMAR', 'AI', 'HIGH', 'SCHOOL'];
 
     const draw = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
@@ -27,7 +29,16 @@ const MatrixRain = () => {
       ctx.font = '15px Fira Code';
 
       for (let i = 0; i < drops.length; i++) {
-        const text = characters[Math.floor(Math.random() * characters.length)];
+        // Randomly decide whether to show a number or a word
+        const shouldShowWord = Math.random() < 0.05; // 5% chance to show a word
+        let text;
+        
+        if (shouldShowWord) {
+          text = words[Math.floor(Math.random() * words.length)];
+        } else {
+          text = characters[Math.floor(Math.random() * characters.length)];
+        }
+
         ctx.fillText(text, i * 20, drops[i] * 20);
 
         if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
